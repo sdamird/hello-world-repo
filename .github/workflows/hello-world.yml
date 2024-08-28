@@ -12,13 +12,18 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
-      - name: echo test
+      # Step 1: Echo test
+      - name: Echo test
         run: echo "Hello, world!"
 
+      # Step 2: Check out the repository
+      - uses: actions/checkout@v4
+
+      # Step 3: Run a one-line script
       - name: Run a one-line script
         run: echo Hello, world!
 
+      # Step 4: Run a multi-line script
       - name: Run a multi-line script
         run: |
           echo Add other actions to build,
